@@ -22,9 +22,11 @@ function processForm(req, res){
             'content-type':'text/plain'
         });
 
-        res.end(util.inspect({
+        var data = JSON.stringify({
             fields: fields
-        }));
+        })
+        res.end(data);
+        console.log(data);
     });
 }
 
